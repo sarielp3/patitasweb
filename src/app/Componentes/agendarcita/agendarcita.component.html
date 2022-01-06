@@ -1,0 +1,23 @@
+<div class="background-image">
+    <div class="cont">
+    
+        <div class="NombreV">
+            <p class="Cartilla">Agendar cita!</p>
+        </div>
+    
+        
+        <section class="form-register">
+                <label class="form-label">Fechas disponibles:</label>
+                <select [(ngModel)]="agendacita.idcita"  name="select">
+                    <option *ngFor="let lista of citasdi" value="{{lista.idcita}}">{{lista.fecha | date : 'medium'}}</option>
+                  </select>
+
+                <button (click)="agendar(agendacita.idcita || '')" class="botons">Agendar Cita</button>
+                <p><a routerLink="/inicio">Inicio</a></p>
+        </section>
+        
+    </div>
+</div>
+
+
+    

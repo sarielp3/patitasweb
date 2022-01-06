@@ -1,0 +1,56 @@
+<div class="background-image">
+
+    <div class="NombreV">
+    <p class="Cartilla">Cartilla de {{equipo.nombre}}</p>
+    </div>
+
+<table class="content-table" style="margin: 0 auto;">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Peso</th>
+        <th scope="col">Nombre de vacuna</th>
+        <th scope="col">Fecha de la aplicacion</th>
+        <th scope="col">Fecha siguiente dosis</th>
+        <th scope="col">Nombre del vacunador</th>
+        
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let mas1 of listardatosc">
+        <td>{{mas1.idmascota}}</td>
+        <td>{{mas1.peso}} KG</td>
+        <td>{{mas1.nomvac}}</td>
+        <td>{{mas1.fechaapl | date : 'mediumDate'}}</td>
+        <td>{{mas1.fechasig | date : 'mediumDate'}}</td>
+        <td>{{mas1.nombre_vac}}</td>
+        
+    </tr><br><br>
+
+
+</tbody>
+</table>
+
+<div class="cont">
+<section class="form-register">
+    <h4>Cartilla Registro</h4>
+    <label class="form-label">Peso de mascota:</label>
+    <input type="text" class="controls" name="peso">
+
+    <label class="form-label">Nombre de vacuna:</label>
+    <input type="text" class="controls" name="nomvac"><br>
+
+    <label class="form-label">Fecha Aplicacion:</label>
+    <input type="date" class="controls" name="fechaapl">
+
+    <label class="form-label">Fecha Proxima Dosis:</label>
+    <input type="date" class="controls" name="fechasig">
+
+    <label class="form-label">Nombre del vacunador:</label>
+    <input type="text" class="controls" name="nombre_vac"><br>
+    <button (click)="agregareg()" type="button" class="botons">Agregar Registro</button>
+    <p><a routerLink="/inicio">Inicio</a></p>
+</section>
+</div>
+
+</div>

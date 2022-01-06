@@ -1,0 +1,54 @@
+<div class="background-reg">
+        <section class="form-register">
+            <h4>Agregar Mascota!</h4>
+            <form [formGroup] = "agregarform" (ngSubmit)="agregar()">
+
+                <div class="alert-danger" *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)">
+                    <div *ngIf="nombre?.errors?.required" class="container-error-message">
+                        Ingrese un nombre
+ 
+                    </div>
+                    <div *ngIf="nombre?.errors?.minlength" class="container-error-message">
+                     El nombre debe de tener 3 o mas caracteres
+ 
+                 </div>
+                </div>
+                
+                <input [(ngModel)] = "equipo.nombre" type="text" placeholder="Nombre(s)" formControlName="nombre" class="controls" name="nombre">
+
+                <div class="alert-danger" *ngIf="tipodemasc?.invalid && (tipodemasc?.dirty || tipodemasc?.touched)">
+                    <div *ngIf="tipodemasc?.errors?.required" class="container-error-message">
+                        Seleccione un tipo de mascota
+ 
+                    </div>
+                </div>
+                <label class="form-label">Tipo de Mascota:</label>
+               <!-- <input [(ngModel)] = "equipo.tipo" type="text" class="form-control" name="tipodemasc">-->
+                <select [(ngModel)]="equipo.tipo" formControlName="tipodemasc" class="comboBox" name="tipodemasc">
+                    <option value="Perro">Perro</option>
+                    <option value="Gato">Gato</option>
+                    <option value="Otro">Otro</option>
+                  </select><br>
+
+                  <br>
+                  <div class="alert-danger" *ngIf="edad?.invalid && (edad?.dirty || edad?.touched)">
+                    <div *ngIf="edad?.errors?.required" class="container-error-message">
+                        Ingrese una edad
+ 
+                    </div>
+                </div>
+
+                
+                <input [(ngModel)] = "equipo.edad" formControlName="edad" placeholder="Edad" type="number" min="0" max="40" class="controls" name="edad">
+
+                <button type="submit" class="botons">Agregar</button>
+                <p><a routerLink="/inicio">Inicio</a></p>
+
+            </form>
+        
+
+  
+    
+
+        </section>
+</div>

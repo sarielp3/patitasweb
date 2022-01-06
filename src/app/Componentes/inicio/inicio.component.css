@@ -1,0 +1,268 @@
+h3{
+
+    text-align: center;
+    font-family: Roboto, "sans-serif";
+    font-size: 20px;
+    position: absolute;
+    margin-left: 110%;
+    border: black;
+
+}
+
+.patasIMG{
+  width: 110px;
+  border: 0px solid white;
+  border-radius: 8px;
+  padding: 2px;
+}
+
+.bienvenida{
+  background-color: #2e518b;
+  color: white;
+}
+
+.botonEditar{
+border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+padding: 10px; /*espacio alrededor texto*/
+background-color: #2e518b; /*color botón*/
+color: #ffffff; /*color texto*/
+text-decoration: none; /*decoración texto*/
+text-transform: uppercase; /*capitalización texto*/
+font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+border-radius: 50px; /*bordes redondos*/
+}
+
+.botonEliminar{
+border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+padding: 10px; /*espacio alrededor texto*/
+background-color: rgb(206, 48, 48); /*color botón*/
+color: #ffffff; /*color texto*/
+text-decoration: none; /*decoración texto*/
+text-transform: uppercase; /*capitalización texto*/
+font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+border-radius: 50px; /*bordes redondos*/
+}
+
+.botonCartilla{
+border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+padding: 10px; /*espacio alrededor texto*/
+background-color: #269222; /*color botón*/
+color: #ffffff; /*color texto*/
+text-decoration: none; /*decoración texto*/
+text-transform: uppercase; /*capitalización texto*/
+font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+border-radius: 50px; /*bordes redondos*/
+}
+
+.botonC{
+  text-align: center;
+  margin-left: 8%;
+  margin-top: 5%;
+  position: relative;
+  width: 180px;
+  color: white;
+  border: 1px solid black;
+  padding: 3px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 50px;
+  background-color: #6c1aef;
+}
+
+.botonC:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #6c1aef;
+}
+
+.botonA{
+  position: absolute;
+  text-align: center;
+  margin-right: 210%;
+  width: 180px;
+  color: black;
+  border-radius: 2px solid white;
+  padding: 3px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  background-color: rgb(4, 175, 41);
+  border-radius: 30px;
+}
+
+p{
+    text-align: center;
+    background-color: slategrey;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%; /*100*/
+    height: 15vh;
+   /* background-image: url("/assets/fondo.jpg");
+    background-color: brown;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;*/
+    background-color: white;
+}
+
+.background-image{
+    /*background-image: url("/assets/inicioF.jpg");*/
+    /*background-color: rgb(158, 139, 202);*/
+    background-color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-position: center;*/
+    height: 200vh;
+}
+
+.navbar {
+    width: 86%; /*84.7*/
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.logo {
+    width: 130px;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: Roboto, "sans-serif";
+    font-size: 1.2rem;
+    font-family: cursive;
+}
+
+.navbar ul li::before {
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: yellowgreen;
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    transition: 0.4s ease-out;
+}
+
+.navbar ul li:hover::before {
+    width: 100%;
+}
+
+
+/* Tabla Diseño */
+
+* {
+    font-family: sans-serif; /* Change your font family */
+  }
+  
+  .content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .content-table thead tr {
+    background-color: #08352c;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+  }
+  
+  .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+  
+  .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+  }
+
+  #banner{  
+    margin-top: 50px;
+    position: relative;
+  }
+
+  #banner img{
+    width: 100%;
+    height: 70vh;
+  }
+
+  section{
+    width: 100%;
+    margin-bottom: 25px ;
+  }
+
+  #banner .contenedor{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #fff;
+  }
+  
+  #banner h2{
+    font-size: 28px;
+  }
+
+  #texto{
+    text-align: center;
+  }
+
+  #texto h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+  }
+
+  .txt2{
+    text-align: left;
+  }
+
+  .aaa {
+    position: absolute;
+    margin-top: -63px; /* ponga en negativo el alto de su pie de página para nuestro    ejemplo usamos 63, usted debe remplazarlo según su diseño   */
+    height: 63px;
+    clear:both;
+    width:100%;
+    background-color: rgba(0, 0, 0, 0.795);
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style:italic;
+   }

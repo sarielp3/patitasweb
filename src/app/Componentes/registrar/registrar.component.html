@@ -1,0 +1,75 @@
+<div class="background-reg">
+<section class="form-register">
+    <h4>Formulario Registro</h4>
+            <form [formGroup] = "registerform" (ngSubmit)="prueba()">
+               <!-- <input [(ngModel)] = "equipo.nombre" type="text" class="form-control" name="nombre">-->
+
+               <div class="alert-danger" *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)">
+                <div *ngIf="nombre?.errors?.required" class="container-error-message">
+                    Nombre es requerido
+
+                </div>
+                <div *ngIf="nombre?.errors?.minlength" class="container-error-message">
+                 El nombre debe de tener 5 o mas caracteres
+
+             </div>
+            </div>
+               <input [(ngModel)] = "datosusuario.nombre" class="controls" type="text" placeholder="Nombre(s)" formControlName="nombre" name="nombre">
+               
+
+               <div class="alert-danger" *ngIf="correo?.invalid && (correo?.dirty || correo?.touched)">
+                <div *ngIf="correo?.errors?.required" class="container-error-message">
+                    correo requerido
+
+                </div>
+                <div *ngIf="correo?.errors?.minlength" class="container-error-message">
+                 debes de ingresar un correo valido
+
+             </div>
+            </div>
+
+                
+                <input [(ngModel)] = "datosusuario.correo" class="controls" type="email" placeholder="Correo electrónico" formControlName="correo"  name="correo">
+                
+                <div class="alert-danger" *ngIf="usuario?.invalid && (usuario?.dirty || usuario?.touched)">
+                    <div *ngIf="usuario?.errors?.required" class="container-error-message">
+                        El nombre de usuario es requerido
+ 
+                    </div>
+                    <div *ngIf="usuario?.errors?.minlength" class="container-error-message">
+                     El nombre de usuario debe de tener 5 o mas caracteres
+ 
+                 </div>
+                </div>
+
+                
+                <input [(ngModel)] = "datosusuario.usuario" class="controls" type="text" placeholder="Nombre de Usuario" formControlName="usuario" name="usuario">
+
+                <div class="alert-danger" *ngIf="pass?.invalid && (pass?.dirty || pass?.touched)">
+                    <div *ngIf="pass?.errors?.required" class="container-error-message">
+                        Ingrese una contraseña
+ 
+                    </div>
+                    <div *ngIf="pass?.errors?.minlength" class="container-error-message">
+                     La contraseña debe de tener 5 o mas caracteres
+ 
+                 </div>
+                </div>
+                
+                <input [(ngModel)] = "datosusuario.contra" class="controls" type="password" placeholder="Contraseña" formControlName="pass" name="pass" >
+
+
+                <div class="alert-danger" *ngIf="repass?.invalid && (repass?.dirty || repass?.touched)">
+                    <div *ngIf="repass?.errors?.required" class="container-error-message">
+                        confirme su contraseña
+                    </div>
+                </div>
+                
+                <input [(ngModel)] = "recontra" class="controls" type="password" placeholder="Confirmar Contraseña" formControlName="repass" name="repass">
+
+                <button class="botons" type="submit" mat-button >Registrarme</button>
+                <p><a href="#">Iniciar Sesión</a></p>
+
+            </form>
+</section>
+</div>

@@ -1,0 +1,26 @@
+<div class="background-reg">
+    <section class="form-register">
+        <h4>Editar Mascota!</h4>
+            <form>
+                <label class="lbl">Nombre de mascota:</label>
+                <input [(ngModel)] = "equipo.nombre" type="text" class="controls" placeholder="Nombre de mascota"  name="nombre">
+
+                <label class="lbl">Tipo de mascota:</label>
+             <!--  <input [(ngModel)] = "equipo.tipo" type="text" class="form-control" name="tipo">--> 
+                <select [(ngModel)]="equipo.tipo"  name="tipo">
+                    <option value="Perro">Perro</option>
+                    <option value="Gato">Gato</option>
+                    <option value="Otro">Otro</option>
+                  </select><br>
+
+                <label class="lbl">Edad:</label>
+                <input [(ngModel)] = "equipo.edad" type="number" class="controls" min="0" max="40" name="edad">
+
+                <button (click)="modificar()" class="botons">Modificar</button>
+                <p><a routerLink="/inicio">Inicio</a></p>
+
+            </form>
+        </section>
+</div>
+      
+

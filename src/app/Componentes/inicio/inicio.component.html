@@ -1,0 +1,82 @@
+<div class="background-image">
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <ul>
+                    <img src="./assets/tema_patitas.jpg" class="patasIMG" alt="patitasLogo">
+                    <li><a routerLink="/inicio">Visualizar Mis Mascotas</a></li>
+                    <li><a routerLink="/AgendarCita">Agendar Cita</a></li>
+                    <li><a routerLink="/MisCitas">Mis Citas Agendadas</a></li>
+                    <!--<li><a routerLink="/login">Iniciar Sesion</a></li>
+                    <li><a routerLink="/RegistrarCuenta">Registrar Cuenta</a></li>-->
+                    <li><a><button *ngIf="mosusu.usuario != ''" (click)="salir()" type="button" class="botonC">Cerrar Sesion</button></a></li>
+
+                </ul>
+                <h3 *ngIf="mosusu.usuario != ''">Usuario: {{mosusu.usuario}}</h3>
+             </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="banner">
+            <img src="./assets/i2.jpg">
+            <div class="contenedor">
+                <h2>Bienvenidos al Sitio Web Patitas!</h2>
+            </div>
+        </section>
+
+        <section id="texto">
+            <h2>Vacune a sus Mascotas!</h2>
+            <h2 class="txt2">Sitio Web Patitas le ayudará a agendar citas para vacunación, ver sus citas agendadas, dar de alta a sus mascotas y ver su cartilla de vacunación de manera sencilla.</h2>
+        </section>
+
+        <!-- <p>Lista De Mascotas!</p> -->
+        <button *ngIf="mosusu.usuario != ''" routerLink="/add" type="button" class="botonA">Agregar Mascota</button>
+    
+
+        <table class="content-table" style="margin: 0 auto;">
+            <thead>
+                <tr>
+                    <th scope="col">Clave</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Tipo De Mascota</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">
+                        Editar
+                    </th>
+                    <th scope="col">
+                        Eliminar
+                    </th>
+                    <th scope="col">
+                        Cartilla de Vacunas
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let mas1 of listarmascotas">
+                    <td>{{mas1.id_mascota}}</td>
+                    <td>{{mas1.nombre}}</td>
+                    <td>{{mas1.tipo}}</td>
+                    <td>{{mas1.edad}}</td>
+                    <td>
+            <button (click)="modificarMascota(mas1.id_mascota || '')" type="button" class="botonEditar">Editar</button>
+            </td>
+        <td>
+            <button (click)="eliminarMascota(mas1.id_mascota || '')" type="button" class="botonEliminar">Eliminar</button>
+        </td>
+        <td>
+            <button (click)="cartilla(mas1.id_mascota || '')" type="button" class="botonCartilla">Cartilla</button>
+        </td>
+        </tr>
+            </tbody>
+        </table>
+    </main>
+
+   
+
+
+
+</div> <!--Fin del Background Body-->
+<footer class="aaa">Copyright © 2022 UAS - All Rights Reserved.</footer>
+<h2 *ngIf="listarmascotas == null">No tienes mascotas registradas</h2>
+

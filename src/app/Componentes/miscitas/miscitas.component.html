@@ -1,0 +1,32 @@
+<div class="background-image">
+    <div class="NombreV">
+        <p class="Cartilla">Mis Citas Medicas!</p>
+    </div>
+
+
+<div class="alinear"> <!-- Inicio de div table -->
+<table class="content-table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Fecha y Hora Cita</th>
+        <th scope="col">
+            
+        </th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let lista of miscitas">
+        <td>{{lista.idcita}}</td>
+        <td>{{lista.fecha | date : 'medium'}} Los Mochis, SIN</td>
+        <td>
+            <button (click)="cancelada(lista.idcita || '')" type="button" class="btn btn-primary">Cancelar Cita</button>
+        </td>
+    </tr>
+    
+</tbody>
+</table>
+</div> <!-- fin de div table -->
+<h3 *ngIf="miscitas == null">No tienes citas agendadas</h3>
+<p><a class="linkkk" routerLink="/inicio">Ir a Inicio</a></p>
+</div>
