@@ -11,21 +11,22 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use(express.static('./dist/patitaswebmochis'));
 
-const connection = mysql.createConnection({
-    host: 'localhost', 
-    user:'root',
-    password:'1655597',
-    database:'bd_patitas'
+app.get('/*', (req,res) =>{
+    res.sendFile('index.html', {root: 'dist/patitaswebmochis/'});
 });
 
 const Pool = require("pg").Pool;
-const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "issue_tracker",
-  password: "password",
-  port: 5432
+const connection = new Pool({
+  user: "zdyhcvwqyathgx",
+  host: "ec2-54-211-74-66.compute-1.amazonaws.com",
+  database: "d1hnq79hlil831",
+  password: "8c719c5fc9f935623ffa1989146fbe5de6ff14d0b5eabaaae9f9986688c6f1de",
+  port: 5432,
+  ssl: {
+    rejectUnauthorized: false
+ }
 });
 
 app.listen(PORT, () => console.log(`servidor corriendo en puerto ${PORT}`));
