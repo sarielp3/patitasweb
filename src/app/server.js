@@ -11,10 +11,10 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static('patitasweb/src/'));
+app.use(express.static(__dirname+'/dist/patitasweb/));
 
 app.get('/*', (req,res) =>{
-    res.sendFile('index.html', {root: 'patitasweb/src/'});
+    res.sendFile(path.join(__dirname+'/dist/patitasweb/index.html'));
 });
 
 const Pool = require("pg").Pool;
