@@ -13,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(__dirname+'/dist/patitasweb/));
 
-app.get('/*', (req,res) =>{
+app.get('/*', function(req,res) =>{
     res.sendFile(path.join(__dirname+'/dist/patitasweb/index.html'));
 });
 
