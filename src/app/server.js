@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname));
 
 app.get('/*', function(req,res) {
-    res.sendFile(path.join('/index.html'));
+    res.sendFile(path.join('src/index.html'));
 });
 
 const Pool = require("pg").Pool;
