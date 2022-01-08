@@ -17,7 +17,7 @@ body {
   }
   
   .waves {
-    background-image: url('C:/Users/mindo/Downloads/Prueba/src/assets/wave.png');
+    background-image: url('src/assets/wave.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
