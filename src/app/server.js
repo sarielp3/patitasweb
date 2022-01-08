@@ -11,10 +11,10 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static('patitaswebmochis'));
+app.use(express.static('./dist/prueba'));
 
 app.get('/*', (req,res) =>{
-    res.sendFile('index.html', {root: 'patitaswebmochis/'});
+    res.sendFile('index.html', {root: 'dist/prueba/'});
 });
 
 const Pool = require("pg").Pool;
