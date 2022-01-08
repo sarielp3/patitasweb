@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname+'/dist/patitasweb/'));
 
 app.get('/*', function(req,res) {
-    res.sendFile(path.join(__dirname+'/dist/patitasweb/index.html'));
+    res.sendFile(path.join(__dirname+'/src/index.html'));
 });
 
 const Pool = require("pg").Pool;
